@@ -19,10 +19,13 @@ fi
 
 cat template.sh | sed "s/__DEVELOPER__/$1/" > ${UNINSTALLER_SCRIPT_FILE_NAME};
 chmod 755 ${UNINSTALLER_SCRIPT_FILE_NAME};
+touch ${PLUGINS_LIST_FILE_NAME};
+chmod 644 ${PLUGINS_LIST_FILE_NAME};
 
 printf "Uninstaller script \e[92m${UNINSTALLER_SCRIPT_FILE_NAME}\e[0m created.\n";
 printf "Now you must create a file listing the plugins from \e[94m${DEVELOPER_NAME}\e[0m which you want to remove.\n";
 printf "The name of the plugin list file must be \e[32;1m${PLUGINS_LIST_FILE_NAME}\e[0m, and it must contain one plugin name per line.\n";
+printf "An empty file for the plugin list (\e[32;1m${PLUGINS_LIST_FILE_NAME}\e[0m) is already created for you, you just have to fill it up.\n";
 printf "See the files in directory \e[32;1mexamples\e[0m for an example.\n";
 printf "After you have created the plugin list file (\e[32;1m${PLUGINS_LIST_FILE_NAME}\e[0m), you can run the uninstaller script file (\e[92m${UNINSTALLER_SCRIPT_FILE_NAME}\e[0m).\n"
 printf "It must be run as root, so use sudo. For example: \e[93;1msudo ./${UNINSTALLER_SCRIPT_FILE_NAME}\e[0m\n";
