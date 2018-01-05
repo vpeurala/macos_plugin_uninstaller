@@ -46,7 +46,7 @@ for PLUGIN in $(awk 'NF {print $0}' ${PLUGINS_LIST_FILE_NAME}); do
 	rm -rf "/Library/Audio/Plug-Ins/Components/${PLUGIN}.component";
 	rm -rf "/Library/Application Support/Avid/Audio/Plug-Ins/${PLUGIN}.aaxplugin";
 	rm -rf "${HOME}/Documents/${DEVELOPER}/${PLUGIN}";
-	rm -rf "${HOME}/Library/Preferences/com.native-instruments.${PLUGIN}.plist";
+	rm -rf "${HOME}/Library/Preferences/${PLIST_PREFIX}.${PLUGIN}.plist";
 	rm -rf "/Library/Application Support/${DEVELOPER}/${PLUGIN}";
 	# NKS Settings: These are always under "Native Instruments" and "com.native-instruments", regardless of the developer.
 	rm -rf "/Library/Application Support/Native Instruments/Service Center/${PLUGIN}.xml";
