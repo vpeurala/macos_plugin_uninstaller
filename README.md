@@ -4,7 +4,7 @@ Uninstalls all VST/AU/AAX plugins listed in a text file.
 
 ## How to use it
 
-Run *./create_uninstaller_script.sh <DEVELOPER_NAME>*, for example *./create_uninstaller_script.sh "Native Instruments"*.
+Run *./create_uninstaller.sh <DEVELOPER_NAME>*, for example *./create_uninstaller.sh "Native Instruments"*.
 
 The script creates an uninstaller script for you and gives you further instructions on how to proceed. Basically, you must make a file listing the plugins to be uninstalled, and then run the created uninstaller script with sudo.
 

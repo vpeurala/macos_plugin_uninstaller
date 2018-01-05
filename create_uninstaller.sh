@@ -9,7 +9,7 @@ fi
 DEVELOPER_NAME=$1;
 DEVELOPER_NAME_IN_LOWER_SNAKE_CASE=$(echo $DEVELOPER_NAME | tr '[:upper:]' '[:lower:]' | sed 's/ /_/g');
 
-UNINSTALLER_SCRIPT_FILE_NAME="uninstall_${DEVELOPER_NAME_IN_LOWER_SNAKE_CASE}_plugins.txt";
+UNINSTALLER_SCRIPT_FILE_NAME="uninstall_${DEVELOPER_NAME_IN_LOWER_SNAKE_CASE}_plugins.sh";
 PLUGINS_LIST_FILE_NAME="${DEVELOPER_NAME_IN_LOWER_SNAKE_CASE}_plugins.txt";
 
 if [[ ! -f "template.sh" ]]; then
