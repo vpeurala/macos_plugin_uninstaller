@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-DEVELOPER="__DEVELOPER__";
+DEVELOPER="Native Instruments";
 PLUGINS_LIST_FILE_NAME=$(echo "$DEVELOPER" | tr '[:upper:]' '[:lower:]' | sed 's/ /_/g' | sed 's/$/_plugins.txt/g');
 PLIST_PREFIX=$(echo "$DEVELOPER" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/^/com./g');
 printf "\e[91mThis script is going to remove all your plugins from \e[96m${DEVELOPER} \e[95m(${PLIST_PREFIX}.*).\e[0m\n";

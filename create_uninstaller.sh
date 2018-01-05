@@ -25,7 +25,7 @@ printf "Now you must create a file listing the plugins from \e[94m${DEVELOPER_NA
 printf "The name of the plugin list file must be \e[32;1m${PLUGINS_LIST_FILE_NAME}\e[0m, and it must contain one plugin name per line.\n";
 printf "See the files in directory \e[32;1mexamples\e[0m for an example.\n";
 printf "After you have created the plugin list file (\e[32;1m${PLUGINS_LIST_FILE_NAME}\e[0m), you can run the uninstaller script file (\e[92m${UNINSTALLER_SCRIPT_FILE_NAME}\e[0m).\n"
-printf "It must be run as root, so use sudo. For example: \e97;1msudo ${UNINSTALLER_SCRIPT_FILE_NAME}\e[0m\n";
+printf "It must be run as root, so use sudo. For example: \e[93;1msudo ./${UNINSTALLER_SCRIPT_FILE_NAME}\e[0m\n";
 printf "It will only work correctly if you have installed the plugins in their default directories.\n";
 printf "If you have installed them somewhere else, you must manually remove some files after running \e[92m${UNINSTALLER_SCRIPT_FILE_NAME}\e[0m; still, it is useful to run the uninstaller script first, because then you will have less manual work afterwards than if you removed the plugins completely manually.\n";
 
