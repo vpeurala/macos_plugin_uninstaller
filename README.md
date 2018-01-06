@@ -2,7 +2,7 @@
 
 Uninstalls all VST/AU/AAX plugins listed in a text file.
 
-## How to use it
+## How to use it for uninstalling plugins
 
 Run *./create_uninstaller.sh <DEVELOPER_NAME>*, for example *./create_uninstaller.sh "Native Instruments"*.
 
@@ -17,6 +17,10 @@ Sometimes "one plugin" actually contains several plugins (versions with a differ
 You have to mention these all in the plugin list file.
 
 See *examples/native_instruments_plugins.txt* for a good example of plugins where the 3 "main" plugins actually contain 11 plugins which have to be removed.
+
+## How to use it for listing plugin files
+
+Sometimes you don't want to necessarily remove a plugin, but only see a list of all the files that the plugin has created in your filesystem - to check (and possibly fix) the contents of some metadata file, for example. In that case you do everything else exactly the same way as when uninstalling plugins, but you just run script *./create_file_lister.sh <DEVELOPER_NAME>* instead of *./create_uninstaller.sh <DEVELOPER_NAME>* in the beginning. This creates a file lister script, and by running it you see all the files which belong to the plugin(s) (and also all the places where there _might_ be files, but are not, so you see if there are some important files missing).
 
 ### This script is only intended for MacOS. It does not work on Windows on Linux.
 
