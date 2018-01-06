@@ -12,12 +12,12 @@ DEVELOPER_NAME_IN_LOWER_SNAKE_CASE=$(echo $DEVELOPER_NAME | tr '[:upper:]' '[:lo
 UNINSTALLER_SCRIPT_FILE_NAME="uninstall_${DEVELOPER_NAME_IN_LOWER_SNAKE_CASE}_plugins.sh";
 PLUGINS_LIST_FILE_NAME="${DEVELOPER_NAME_IN_LOWER_SNAKE_CASE}_plugins.txt";
 
-if [[ ! -f "template.sh" ]]; then
-	printf "\e[91mFile \e[32;1mtemplate.sh \e[91;21m is not found in this directory. It is required for this script to work.\e[0m\n";
+if [[ ! -f "uninstaller_template.sh" ]]; then
+	printf "\e[91mFile \e[32;1muninstaller_template.sh \e[91;21m is not found in this directory. It is required for this script to work.\e[0m\n";
 	exit 66;
 fi
 
-cat template.sh | sed "s/__DEVELOPER__/$1/" > ${UNINSTALLER_SCRIPT_FILE_NAME};
+cat uninstaller_template.sh | sed "s/__DEVELOPER__/$1/" > ${UNINSTALLER_SCRIPT_FILE_NAME};
 chmod 755 ${UNINSTALLER_SCRIPT_FILE_NAME};
 touch ${PLUGINS_LIST_FILE_NAME};
 chmod 644 ${PLUGINS_LIST_FILE_NAME};
