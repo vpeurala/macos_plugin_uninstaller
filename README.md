@@ -22,5 +22,5 @@ See *examples/native_instruments_plugins.txt* for a good example of plugins wher
 
 Sometimes you don't want to necessarily remove a plugin, but only see a list of all the files that the plugin has created in your filesystem - to check (and possibly fix) the contents of some metadata file, for example. In that case you do everything else exactly the same way as when uninstalling plugins, but you just run script *./create_file_lister.sh <DEVELOPER_NAME>* instead of *./create_uninstaller.sh <DEVELOPER_NAME>* in the beginning. This creates a file lister script, and by running it you see all the files which belong to the plugin(s) (and also all the places where there _might_ be files, but are not, so you see if there are some important files missing).
 
-### This script is only intended for MacOS. It does not work on Windows on Linux.
+### This script is only intended for MacOS. It does not work on Windows or Linux.
 
